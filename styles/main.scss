@@ -1,0 +1,123 @@
+// Color Palette
+$bg-color: #121212;
+$text-color: #e0e0e0;
+$primary-color: #4a90e2;
+$accent-color: #1f1f1f;
+$secondary-color: #2b2b2b;
+$button-hover: #357abd;
+$user-msg-bg: #4a90e2;
+$bot-msg-bg: #1f1f1f;
+$input-bg: #1e1e1e;
+
+// General Styles
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: $bg-color;
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+// Main Chat Container
+.container {
+    background-color: $secondary-color;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+// Title Bar
+.header {
+    background-color: $accent-color;
+    padding: 16px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: $primary-color;
+}
+
+// Chat Messages
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+// Messages
+.message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+// Bot Messages
+.bot-message {
+    background-color: $bot-msg-bg;
+    color: #ffffff;
+    align-self: flex-start;
+}
+
+// User Messages
+.user-message {
+    background-color: $user-msg-bg;
+    color: #fff;
+    align-self: flex-end;
+}
+
+// Dropdown Styling
+select {
+    background-color: $input-bg;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+// Input Field
+.input-container {
+    display: flex;
+    padding: 10px;
+    background-color: $accent-color;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: $input-bg;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+// 📨 Send Button
+button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    &:hover {
+        background-color: $button-hover;
+    }
+}

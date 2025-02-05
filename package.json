@@ -1,0 +1,54 @@
+{
+  "name": "qbraid-chat",
+  "displayName": "qbraid-chat",
+  "description": "qbraid-chat",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "authentication": [
+      {
+        "label": "Api-Key",
+        "id": "key"
+      }
+    ],
+    "commands": [
+      {
+        "command": "qbraid-chat.start",
+        "title": "AqBraid Chat: Start"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "vsce:package": "vsce package --out qbraid-chat-0.1.0.vsix",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "build-css": "sass styles/main.scss styles/main.css"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.16.0",
+    "sass": "^1.83.4",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.2.2",
+    "axios": "^1.7.9"
+  }
+}
